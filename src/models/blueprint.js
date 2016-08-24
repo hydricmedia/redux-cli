@@ -196,6 +196,7 @@ export default class Blueprint {
     const fileMap = this.generateFileMap(fileMapVariables);
 
     const standardLocals = {
+      constantEntityName: normalizeCasing(entityName, 'snake').toUpperCase(),
       pascalEntityName: normalizeCasing(entityName, 'pascal'),
       camelEntityName:  normalizeCasing(entityName, 'camel'),
       snakeEntityName: normalizeCasing(entityName, 'snake'),
